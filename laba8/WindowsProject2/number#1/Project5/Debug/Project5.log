@@ -1,0 +1,6 @@
+﻿  Source.c
+c:\users\макс\source\repos\project5\project5\source.c(34): error C2275: HDC: недопустимое использование этого типа в качестве выражения
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\windef.h(80): note:  см. объявление "HDC"
+c:\users\макс\source\repos\project5\project5\source.c(34): error C2146: синтаксическая ошибка: отсутствие ")" перед идентификатором "hdc"
+c:\users\макс\source\repos\project5\project5\source.c(34): error C2198: drawHome: слишком мало аргументов для вызова
+c:\users\макс\source\repos\project5\project5\source.c(34): error C2059: синтаксическая ошибка: )
