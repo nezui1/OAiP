@@ -7,20 +7,20 @@
 #define MAX_LOADSTRING 100
 
 // Глобальные переменные:
-HINSTANCE hInst;                                // текущий экземпляр
-WCHAR szTitle[MAX_LOADSTRING];                  // Текст строки заголовка
-WCHAR szWindowClass[MAX_LOADSTRING];            // имя класса главного окна
+HINSTANCE hInst; // текущий экземпляр
+WCHAR szTitle[MAX_LOADSTRING]; // Текст строки заголовка
+WCHAR szWindowClass[MAX_LOADSTRING]; // имя класса главного окна
 
 // Отправить объявления функций, включенных в этот модуль кода:
-ATOM                MyRegisterClass(HINSTANCE hInstance);
-BOOL                InitInstance(HINSTANCE, int);
-LRESULT CALLBACK    WndProc(HWND, UINT, WPARAM, LPARAM);
-INT_PTR CALLBACK    About(HWND, UINT, WPARAM, LPARAM);
+ATOM MyRegisterClass(HINSTANCE hInstance);
+BOOL InitInstance(HINSTANCE, int);
+LRESULT CALLBACK WndProc(HWND, UINT, WPARAM, LPARAM);
+INT_PTR CALLBACK About(HWND, UINT, WPARAM, LPARAM);
 
 int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
 	_In_opt_ HINSTANCE hPrevInstance,
-	_In_ LPWSTR    lpCmdLine,
-	_In_ int       nCmdShow)
+	_In_ LPWSTR lpCmdLine,
+	_In_ int nCmdShow)
 {
 	UNREFERENCED_PARAMETER(hPrevInstance);
 	UNREFERENCED_PARAMETER(lpCmdLine);
@@ -58,9 +58,9 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
 
 
 //
-//  ФУНКЦИЯ: MyRegisterClass()
+// ФУНКЦИЯ: MyRegisterClass()
 //
-//  ЦЕЛЬ: Регистрирует класс окна.
+// ЦЕЛЬ: Регистрирует класс окна.
 //
 ATOM MyRegisterClass(HINSTANCE hInstance)
 {
@@ -84,14 +84,14 @@ ATOM MyRegisterClass(HINSTANCE hInstance)
 }
 
 //
-//   ФУНКЦИЯ: InitInstance(HINSTANCE, int)
+// ФУНКЦИЯ: InitInstance(HINSTANCE, int)
 //
-//   ЦЕЛЬ: Сохраняет маркер экземпляра и создает главное окно
+// ЦЕЛЬ: Сохраняет маркер экземпляра и создает главное окно
 //
-//   КОММЕНТАРИИ:
+// КОММЕНТАРИИ:
 //
-//        В этой функции маркер экземпляра сохраняется в глобальной переменной, а также
-//        создается и выводится главное окно программы.
+// В этой функции маркер экземпляра сохраняется в глобальной переменной, а также
+// создается и выводится главное окно программы.
 //
 BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
 {
@@ -112,13 +112,13 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
 }
 
 //
-//  ФУНКЦИЯ: WndProc(HWND, UINT, WPARAM, LPARAM)
+// ФУНКЦИЯ: WndProc(HWND, UINT, WPARAM, LPARAM)
 //
-//  ЦЕЛЬ: Обрабатывает сообщения в главном окне.
+// ЦЕЛЬ: Обрабатывает сообщения в главном окне.
 //
-//  WM_COMMAND  - обработать меню приложения
-//  WM_PAINT    - Отрисовка главного окна
-//  WM_DESTROY  - отправить сообщение о выходе и вернуться
+// WM_COMMAND - обработать меню приложения
+// WM_PAINT - Отрисовка главного окна
+// WM_DESTROY - отправить сообщение о выходе и вернуться
 //
 //
 LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
@@ -148,7 +148,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 		HDC hdc = BeginPaint(hWnd, &ps);
 		HPEN hPen;
 		HPEN hPen1;
-		HPEN hPen2; 
+		HPEN hPen2;
 		HPEN hPen3;
 
 		hPen = CreatePen(PS_SOLID, 3, RGB(102, 0, 0));
@@ -163,7 +163,6 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 		MoveToEx(hdc, 150, 350, NULL);
 		LineTo(hdc, 275, 250);
 		LineTo(hdc, 400, 350);
-
 		LineTo(hdc, 400, 525);
 		LineTo(hdc, 150, 525);
 		LineTo(hdc, 150, 350);
@@ -266,7 +265,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 			hPen3 = CreatePen(PS_SOLID, 3, RGB(124, 252, 0));
 			SelectObject(hdc, hPen3);
 			x1 = 650, y1 = 175;
-			x2 = 660, y2 = 200;
+			x2 = 650, y2 = 200;
 			do {
 				MoveToEx(hdc, x2, y2, NULL);
 				LineTo(hdc, x1, y1);
@@ -275,18 +274,60 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 
 			} while (x1 <= 850);
 			SelectObject(hdc, hPen3);
-			x1 = 650, y1 = 210;
-			x2 = 670, y2 = 185;
+			x1 = 680, y1 = 140;
+			x2 = 680, y2 = 160;
 			do {
 				MoveToEx(hdc, x2, y2, NULL);
 				LineTo(hdc, x1, y1);
 				x1 += 15;
 				x2 += 15;
 
-			} while (x1 <= 850);
+			} while (x1 <= 820);
+			SelectObject(hdc, hPen3);
+			x1 = 710, y1 = 110;
+			x2 = 710, y2 = 130;
+			do {
+				MoveToEx(hdc, x2, y2, NULL);
+				LineTo(hdc, x1, y1);
+				x1 += 15;
+				x2 += 15;
 
-		
-		
+			} while (x1 <= 790);
+			SelectObject(hdc, hPen3);
+			x1 = 740, y1 = 80;
+			x2 = 740, y2 = 100;
+			do {
+				MoveToEx(hdc, x2, y2, NULL);
+				LineTo(hdc, x1, y1);
+				x1 += 15;
+				x2 += 15;
+
+			} while (x1 <= 760);
+			HBRUSH hBrush1;
+			hBrush1 = CreateSolidBrush(RGB(222, 222, 222));
+			SelectObject(hdc, hBrush1);
+			SelectObject(hdc, hPen2);
+			MoveToEx(hdc, 700, 140, NULL);
+			Ellipse(hdc, 700, 140, 680, 110);
+			MoveToEx(hdc, 700, 140, NULL);
+			Ellipse(hdc, 810, 140, 790, 110);
+			MoveToEx(hdc, 700, 140, NULL);
+			Ellipse(hdc, 860, 240, 840, 210);
+			MoveToEx(hdc, 700, 140, NULL);
+			Ellipse(hdc, 660, 240, 640, 210);
+			/*SelectObject(hdc, hPen3);
+			x1 = 650, y1 = 210;
+			x2 = 670, y2 = 185;
+			do {
+			MoveToEx(hdc, x2, y2, NULL);
+			LineTo(hdc, x1, y1);
+			x1 += 15;
+			x2 += 15;
+
+			} while (x1 <= 850);*/
+
+
+
 
 		}
 
