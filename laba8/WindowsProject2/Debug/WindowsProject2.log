@@ -1,0 +1,3 @@
+﻿  WindowsProject2.cpp
+c:\users\макс\source\repos\windowsproject2\windowsproject2\windowsproject2.cpp(63): warning C4101: hPen3: неиспользованная локальная переменная
+  WindowsProject2.vcxproj -> C:\Users\Макс\source\repos\WindowsProject2\Debug\WindowsProject2.exe
