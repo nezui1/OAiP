@@ -1,0 +1,7 @@
+﻿  Source.c
+c:\users\макс\source\repos\laba20\laba20\source.c(190): warning C4244: =: преобразование "int" в "float", возможна потеря данных
+c:\users\макс\source\repos\laba20\laba20\source.c(191): warning C4244: =: преобразование "float" в "int", возможна потеря данных
+c:\users\макс\source\repos\laba20\laba20\source.c(192): warning C4244: =: преобразование "float" в "int", возможна потеря данных
+c:\users\макс\source\repos\laba20\laba20\source.c(168): warning C4305: инициализация: усечение из "__int64" в "int"
+c:\users\макс\source\repos\laba20\laba20\source.c(169): warning C4305: инициализация: усечение из "__int64" в "int"
+  laba20.vcxproj -> C:\Users\Макс\source\repos\laba20\Debug\laba20.exe
