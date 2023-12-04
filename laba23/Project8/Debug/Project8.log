@@ -1,0 +1,6 @@
+﻿  Source.c
+c:\users\макс\source\repos\project8\project8\source.c(23): warning C4474: "printf" : для строки формата передано слишком много аргументов
+  c:\users\макс\source\repos\project8\project8\source.c(23): note: заполнители и их параметры ожидают переменное число аргументов в количестве 0, но было предоставлено 1
+c:\users\макс\source\repos\project8\project8\source.c(31): warning C4474: "printf" : для строки формата передано слишком много аргументов
+  c:\users\макс\source\repos\project8\project8\source.c(31): note: заполнители и их параметры ожидают переменное число аргументов в количестве 0, но было предоставлено 1
+  Project8.vcxproj -> C:\Users\Макс\source\repos\Project8\Debug\Project8.exe

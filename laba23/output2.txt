@@ -1,0 +1,44 @@
+#DEFINE _CRT_SECURE_NO_WARNINGS
+#INCLUDE <WINDOWS.H>
+#INCLUDE <STDIO.H>
+#DEFINE MAX_LEN 80
+CHAR S[MAX_LEN];
+
+VOID MAIN() {
+	SETCONSOLECP(1251);
+	SETCONSOLEOUTPUTCP(1251);
+
+	PRINTF("Кадышев Максим\N");
+	PRINTF("ЛР23 Задача 1\N");
+
+	FILE* FIN;
+	FIN = FOPEN("C:\\USERS\\Макс\\SOURCE\\REPOS\\PROJECT8\\INPUT1.TXT","RT");
+	IF (FIN == NULL) {
+		PRINTF("Нет файла");
+		RETURN;
+	}
+
+	FILE* FOUT;
+	FOUT = FOPEN("C:\\USERS\\Макс\\SOURCE\\REPOS\\PROJECT8\\OUTPUT1.TXT", "WT");
+	IF (FOUT == NULL) {
+		PRINTF("Нет файла");
+		RETURN;
+	}
+	WHILE (!FEOF(FIN)) {
+		IF (FGETS(S, MAX_LEN - 1, FIN) != NULL) {
+			FOR (INT I = 0; S[I] != '\0'; I++) {
+
+				IF (S[I] == '\T') {
+					S[I] = '%';
+				}
+			}
+		}
+	}
+	FPRINTF(FOUT, "%S", S);
+	PRINTF(">>%S<<\N", S);
+	FCLOSE(FIN);
+	FCLOSE(FOUT);
+
+	PRINTF("ЛР23 Задача 1 FINISH\N");
+}
+
