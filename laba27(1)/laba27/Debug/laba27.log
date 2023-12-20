@@ -1,0 +1,3 @@
+﻿  TextProcessing.c
+c:\users\макс\source\repos\laba27\laba27\textprocessing.c(171): warning C4013: isalpha: нет определения; предполагается "extern" с возвратом типа "int"
+  laba27.vcxproj -> C:\Users\Макс\source\repos\laba27\Debug\laba27.exe
